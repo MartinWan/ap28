@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday Astha — Bollywood Dance Game</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div id="splash">
+    <h1>Happy Birthday, Astha ❤️</h1>
+    <p>Bollywood Dance Battle in SF &amp; Fremont</p>
+    <button id="enterBtn">Enter</button>
+  </div>
+
+  <div id="game" class="hidden">
+    <header class="topbar">
+      <div class="left">
+        <label class="filebtn">Load Splash Music
+          <input type="file" id="splashMusicFile" accept="audio/*"/>
+        </label>
+        <label class="filebtn">Load Game Music
+          <input type="file" id="gameMusicFile" accept="audio/*"/>
+        </label>
+        <label class="filebtn">Load Astha Photo
+          <input type="file" id="photoAstha" accept="image/*"/>
+        </label>
+        <label class="filebtn">Load Martin Photo
+          <input type="file" id="photoMartin" accept="image/*"/>
+        </label>
+        <label class="filebtn">Load Background Photos
+          <input type="file" id="bgPhotosInput" accept="image/*" multiple webkitdirectory directory/>
+        </label>
+        <label class="filebtn">Load Polaroid Photos
+          <input type="file" id="polaroidPhotosInput" accept="image/*" multiple webkitdirectory directory/>
+        </label>
+      </div>
+      <div class="mid controls">
+        <label>BPM <input id="bpm" type="range" min="60" max="200" value="120"/></label>
+        <span id="bpmVal">120</span>
+        <button id="dropTest">Drop test notes</button>
+        <select id="bgSelect">
+          <option value="sf">San Francisco</option>
+          <option value="fremont">Fremont</option>
+        </select>
+        <select id="modeSelect">
+          <option value="1p">1 Player</option>
+          <option value="2p">2 Players</option>
+        </select>
+        <button id="playPause">Play</button>
+        <button id="restart">Restart</button>
+      </div>
+      <div class="right">
+        <div class="score">P1: <span id="score1">0</span></div>
+        <div class="score two">P2: <span id="score2">0</span></div>
+      </div>
+    </header>
+
+    <div id="stage">
+      <div id="resultsOverlay" class="hidden">
+        <div class="results-card">
+          <h2>Great job! 🎉</h2>
+          <p>Here are some favorite moments…</p>
+          <div id="resultsGallery" class="gallery"></div>
+          <button id="resultsClose">Play Again</button>
+        </div>
+      </div>
+      <img id="bg" src="assets/placeholders/bg_sf.svg" alt="Background"/>
+      <div id="lanes">
+        <div class="lane" data-lane="0"><span>A</span></div>
+        <div class="lane" data-lane="1"><span>S</span></div>
+        <div class="lane" data-lane="2"><span>D</span></div>
+        <div class="lane" data-lane="3"><span>F</span></div>
+        <div class="divider"></div>
+        <div class="lane p2" data-lane="4"><span>J</span></div>
+        <div class="lane p2" data-lane="5"><span>K</span></div>
+        <div class="lane p2" data-lane="6"><span>L</span></div>
+        <div class="lane p2" data-lane="7"><span>;</span></div>
+      </div>
+      <div id="characters">
+        <img id="charAstha" src="assets/placeholders/astha.png" alt="Astha"/>
+        <img id="charMartin" src="assets/placeholders/martin.png" alt="Martin"/>
+      </div>
+      <div id="judges"><div id="popup"></div></div>
+    </div>
+
+    <footer class="help">
+      <p><strong>Controls:</strong> P1: A S D F • P2: J K L ; • Space: Pause/Resume • R: Restart</p>
+    </footer>
+  </div>
+
+  <div id="autoplayNotice" class="hidden">Tap anywhere or press Enter to enable sound</div>
+  <script src="assets/photos/manifest.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

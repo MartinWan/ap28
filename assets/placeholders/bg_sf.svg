@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+  <defs><linearGradient id="g" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#ff5f6d"/><stop offset="1" stop-color="#ffc371"/></linearGradient></defs>
+  <rect width="1600" height="900" fill="url(#g)"/>
+  <g fill="none" stroke="#320a28" stroke-width="10" opacity="0.7">
+    <line x1="0" y1="700" x2="1600" y2="700"/>
+    <line x1="200" y1="700" x2="200" y2="350"/>
+    <line x1="1200" y1="700" x2="1200" y2="350"/>
+    <path d="M0,700 C200,620 400,620 600,700 S1000,780 1200,700 S1400,620 1600,700"/>
+  </g>
+  <text x="50%" y="120" text-anchor="middle" font-size="64" fill="#fff" font-family="Verdana, sans-serif">San Francisco</text>
+</svg>
